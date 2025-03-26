@@ -13,7 +13,7 @@ void input()
 
         if (n <= 20)
         { // membuat kondisi ntidak lebih dari 20
-            break
+            break;
         }
         else
         {
@@ -38,8 +38,11 @@ void insertionSort()
     
     for (i = 1; i <= n - 1; i++)
     { //step 1
+
         temp = arr[i]; //step 2
+
         j = i - 1; //step 3
+
         while (j >= 0 && arr[j] > temp) //step 4
         {
             arr[j + 1] = arr[j]; //step 4a
@@ -53,7 +56,7 @@ void display()
 {
     cout << endl; //output baris kosong
     cout << "==================================" << endl;
-    cout << "total Pass = " << n - 1 << enl;// count element movement
+    cout << "Total Pass = " << n - 1 << endl;// count element movement
     cout << "==================================" << endl; //output ke layar
     cout << "Element Array yang telah tersusun" << endl; //output ke layar
     cout << "==================================" << endl; //output ke layar
@@ -63,4 +66,13 @@ void display()
         cout << arr[j] << endl; //output ke layar
     }
     cout << endl; //output ke layar
+}
+
+int main()
+{
+    input();
+    insertionSort();
+    display();
+    system("Pause");
+    return 0;
 }
